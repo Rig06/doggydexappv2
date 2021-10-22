@@ -4,6 +4,7 @@ import './App.css';
 import {Switch } from "react-router";
 import { Navbar } from 'reactstrap';
 
+
 import CreateDogProfile from './components/dogbreedcomp/CreateDogProfile';
 import ShowDogList from './components/dogbreedcomp/ShowDogBreedList';
 import ShowDogbreedDetails from './components/dogbreedcomp/ShowDogbreedDetails';
@@ -20,6 +21,7 @@ import RegisterNewUserForm from './components/usercomp/RegisterNewUserform';
 import Home from './components/Home';
 import About from './components/About';
 import {StyledLink} from './components/style';
+import SeachBar from './components/Search';
 
 
 
@@ -29,16 +31,24 @@ import {StyledLink} from './components/style';
   render() {
   return (
     <Router>
+      
       <div>
 
+
+
+
       <Navbar  className="nav-var">
+     
       <nav > 
       <StyledLink to="/"  className="btn btn-outline  " >HOME</StyledLink> 
       <StyledLink to="/about-us"  className="btn btn-outline  " >About us</StyledLink> 
       <StyledLink to="/register-user"  className="btn btn-outline  " >Register</StyledLink>  
       <StyledLink to="/show-user-list"  className="btn btn-outline  " >All Users</StyledLink> 
       <StyledLink to="/show-dog-list"  className="btn btn-outline  " >All Dog Breeds</StyledLink>
+
+    
       </nav>
+      <SeachBar />
       </Navbar>
 
       <Switch> 
