@@ -14,7 +14,7 @@ class showUserDetails extends Component {
   componentDidMount() {
 
     axios
-      .get('http://localhost:8082/api/basicuser/'+this.props.match.params.id)
+      .get('/api/basicuser/'+this.props.match.params.id)
       .then(res => {
         console.log(res.data);
         this.setState({
@@ -28,7 +28,7 @@ class showUserDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('http://localhost:8082/api/basicuser/' + id)
+      .delete('/api/basicuser/' + id)
       .then(res => {
         this.props.history.push("/");
       })

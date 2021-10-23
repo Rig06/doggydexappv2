@@ -34,7 +34,7 @@ class RegisterNewUser extends Component {
         password01: this.state.password01,
         password02: this.state.password02
        }
-      axios.post('http://localhost:8082/api/basicuser/signup/', data)
+      axios.post('/api/basicuser/signup/', data)
         .then(res =>  {
           this.setState({
                 name: '',

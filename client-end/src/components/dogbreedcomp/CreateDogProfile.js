@@ -28,7 +28,7 @@ class AddDogBreed extends Component {
     };
 
     axios
-      .post('http://localhost:8082/api/dogbreed/', data)
+      .post('/api/dogbreed/', data)
       .then(res => {
         this.setState({
           dogbreed: '',

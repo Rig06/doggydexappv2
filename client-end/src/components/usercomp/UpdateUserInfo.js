@@ -16,7 +16,7 @@ class UpdateUserInfo extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/basicuser/'+this.props.match.params.id)
+      .get('/api/basicuser/'+this.props.match.params.id)
       .then(res => {
         this.setState({
         name: res.data.name,
@@ -45,7 +45,7 @@ class UpdateUserInfo extends Component {
     };
 
     axios
-      .put('http://localhost:8082/api/basicuser/'+this.props.match.params.id, data)
+      .put('/api/basicuser/'+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-user/'+this.props.match.params.id);
       })

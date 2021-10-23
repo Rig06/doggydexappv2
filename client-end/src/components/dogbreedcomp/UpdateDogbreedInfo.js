@@ -14,7 +14,7 @@ class UpdateDogBreedInfo extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/dogbreed/'+this.props.match.params.id)
+      .get('/api/dogbreed/'+this.props.match.params.id)
       .then(res => {
         this.setState({
         dogbreed: res.data.dogbreed,

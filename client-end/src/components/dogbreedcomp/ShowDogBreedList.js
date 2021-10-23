@@ -15,7 +15,7 @@ class ShowDogBreedList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/dogbreed')
+      .get('/api/dogbreed')
       .then(res => {
         this.setState({
           dogbreeds: res.data
